@@ -1,0 +1,7 @@
+flask
+pytest
+coverage
+flake8
+black
+pytest-cov
+
