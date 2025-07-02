@@ -1,135 +1,161 @@
-# 🚀 AWS DevOps CI/CD Pipeline Demo
+# 🚀 GitHub Actions DevOps Pipeline
 
-[![Build Status](https://github.com/saiakhil-devops/aws-devops-pipeline-demo/actions/workflows/main.yml/badge.svg)](https://github.com/saiakhil-devops/aws-devops-pipeline-demo/actions)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Python](https://img.shields.io/badge/python-3.9-blue.svg)](https://www.python.org/downloads/release/python-390/)
-
-A professionally structured DevOps project demonstrating a complete **CI/CD pipeline** using **GitHub Actions**, **Docker**, and **Python**. This repository showcases key DevOps practices including code validation, containerization, automated testing, and deployment readiness — ideal for production and real-world corporate environments.
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/saiakhil-devops/github-actions-devops-pipeline/ci.yml?label=CI%20Status&style=flat-square)
+![Docker](https://img.shields.io/badge/Dockerized-Yes-blue?style=flat-square)
+![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)
+![Python](https://img.shields.io/badge/Python-3.10+-blue.svg?style=flat-square)
+![Last Commit](https://img.shields.io/github/last-commit/saiakhil-devops/github-actions-devops-pipeline?style=flat-square)
 
 ---
 
-## 📁 Project Directory Structure
+## 📘 Overview
+
+This repository showcases a **complete CI/CD pipeline** implemented using **GitHub Actions**, integrated with a **Dockerized Flask application** and automated **Python code quality checks**. It serves as a **professional job portfolio project**, designed for aspiring **DevOps engineers, Cloud practitioners, and backend developers**.
+
+The main goal is to simulate real-world DevOps workflows used in production environments—focusing on continuous integration, code quality enforcement, and deployment-readiness.
+
+---
+
+## 🧩 Key Features
+
+| Feature                      | Description                                                                 |
+|-----------------------------|-----------------------------------------------------------------------------|
+| ✅ Continuous Integration    | Automatic testing, linting, and formatting on every push and PR             |
+| 🐍 Python 3.10+              | Compatible with the latest Python standards                                 |
+| 🧪 Pytest Testing            | Unit tests to ensure code reliability                                       |
+| 🎨 Code Formatting           | Uses **Black** to auto-format code consistently                            |
+| 🔍 Code Linting              | Applies **Flake8** for style and syntax enforcement                         |
+| 🐳 Dockerized                | Flask app runs in a portable Docker container                              |
+| 🤖 GitHub Actions            | Seamless CI configured in `.github/workflows/ci.yml`                       |
+| 🌐 Cloud-Oriented            | Aligned with AWS/GCP/Azure DevOps practices                                |
+
+---
+
+## 🗂 Project Structure
 
 ```
-aws-devops-pipeline-demo/
-│
-├── app/                    # Python web application
-│   └── app.py
-│
-├── tests/                  # Unit test cases
-│   └── test_sample.py
-│
-├── .github/
-│   └── workflows/
-│       └── main.yml        # GitHub Actions workflow
-│
-├── Dockerfile              # Docker image definition
-├── requirements.txt        # Python dependencies
-└── README.md               # Project documentation
+github-actions-devops-pipeline/
+├── .github/workflows/
+│   └── ci.yml               # GitHub Actions CI workflow
+├── app/
+│   └── app.py               # Simple Flask application
+├── tests/
+│   └── test_sample.py       # Unit test for the app
+├── Dockerfile               # Docker image configuration
+├── requirements.txt         # Dependencies
+└── README.md                # Project documentation
 ```
 
 ---
 
-## 🧰 Technology Stack
+## 🧪 CI/CD Workflow Details
 
-| Category         | Tools Used                       |
-|------------------|----------------------------------|
-| Language         | Python 3.9                       |
-| Version Control  | Git + GitHub                    |
-| CI/CD Pipeline   | GitHub Actions                   |
-| Testing          | Pytest                           |
-| Code Quality     | Flake8, Black                    |
-| Containerization | Docker                           |
-| IDE              | VS Code / PyCharm                |
+The GitHub Actions workflow (`ci.yml`) includes:
+
+- 🔃 Triggered on push & pull requests to `main`
+- 📦 Installs Python dependencies
+- 🔎 Runs **flake8** for linting
+- 🎨 Formats code using **black**
+- ✅ Executes tests with **pytest**
 
 ---
 
-## ⚙️ CI/CD Pipeline Workflow
+## 💻 Local Development
 
-This project uses **GitHub Actions** to automate the following:
+### Requirements
+- Python 3.10+
+- Git & GitHub CLI
+- Docker (optional but recommended)
 
-1. 🧾 Code checkout and Python setup  
-2. 📦 Dependency installation  
-3. ✅ Unit testing using `pytest`  
-4. 🔍 Linting with `flake8` and formatting check with `black`  
-5. 🐳 Docker image build  
-6. 🛠️ Future: Container push & AWS deployment (coming soon)
-
-**Trigger**: On every push or pull request to the `main` branch.
-
----
-
-## 💻 Run Locally
+### Steps
 
 ```bash
-# Clone the repository
-git clone https://github.com/saiakhil-devops/aws-devops-pipeline-demo.git
-cd aws-devops-pipeline-demo
+# Clone repository
+git clone https://github.com/saiakhil-devops/github-actions-devops-pipeline.git
+cd github-actions-devops-pipeline
 
-# Create virtual environment
+# Setup virtual environment
 python -m venv venv
-source venv/bin/activate   # Windows: venv\Scripts\activate
+source venv/bin/activate  # Windows: venv\Scripts\activate
 
 # Install dependencies
 pip install -r requirements.txt
 
-# Run the app
+# Run Flask app
 python app/app.py
+
+# Run tests
+pytest
 ```
 
 ---
 
-## 🧪 Run Tests
+## 🐳 Running with Docker
 
 ```bash
-pytest tests/
+# Build Docker image
+docker build -t devops-pipeline-app .
+
+# Run container
+docker run -p 5000:5000 devops-pipeline-app
 ```
 
-Run all tests inside the `tests/` folder and check output. For code coverage:
-
-```bash
-pytest --cov=app
-```
+App will be accessible at `http://localhost:5000`
 
 ---
 
-## 🐳 Docker Support
+## 📈 Why This Project Matters
 
-```bash
-# Build the Docker image
-docker build -t aws-devops-demo .
+This project is designed to highlight your:
 
-# Run the container
-docker run -p 5000:5000 aws-devops-demo
-```
+- ✅ Proficiency in **DevOps tooling**
+- ☁️ Readiness for **cloud-native development**
+- 🔄 Understanding of **CI/CD best practices**
+- 🧠 Knowledge of **code quality gates**
 
----
-
-## 🚀 Roadmap & Future Enhancements
-
-- [ ] Add AWS EC2/Fargate deployment automation
-- [ ] Integrate Terraform for Infrastructure as Code (IaC)
-- [ ] Set up DockerHub auto-push
-- [ ] Add SonarQube for code quality reports
-- [ ] Configure Slack/MS Teams pipeline alerts
-- [ ] Multi-environment staging (dev/stage/prod)
+Perfect for showcasing in job interviews or on your LinkedIn/GitHub profile.
 
 ---
 
-## 👨‍💻 Author
+## 🏷️ Badges of Practice
 
-**Sai Akhil Perumalla**  
-🔹 AWS Certified | DevOps & Cloud Enthusiast | QA Engineer  
-📍 Scarborough, Ontario  
-📧 saiakhilperumalla@gmail.com  
-🔗 [GitHub](https://github.com/saiakhil-devops) | [LinkedIn](https://www.linkedin.com/in/sai-akhil-perumalla-0b473819b)
+- ✅ **GitHub Actions CI**
+- 🐳 **Dockerization**
+- 📦 **Dependency Management**
+- 📄 **Documentation and README excellence**
+- 🧪 **Testing Coverage**
+
+---
+
+## 🧠 Technologies Used
+
+- GitHub Actions
+- Docker
+- Python 3.10+
+- Flask
+- Pytest
+- Flake8
+- Black
+
+---
+
+## 🙌 Contributions
+
+This project is self-developed as a job portfolio but contributions, feedback, and improvements are welcome! Fork the repo and start enhancing it.
 
 ---
 
 ## 📄 License
 
-This project is licensed under the [MIT License](LICENSE).
+Licensed under the **MIT License**.
 
 ---
 
-> 🔥 *This repository is crafted to align with real-world DevOps job requirements, showcasing hands-on experience with CI/CD pipelines, Dockerization, automated testing, and scalable workflows.*
+## 👤 Author
+
+**Sai Akhil Perumalla**  
+📍 Scarborough, Ontario, Canada  
+📧 saiakhilperumalla@gmail.com  
+🔗 [GitHub Profile](https://github.com/saiakhil-devops)  
+
+---
