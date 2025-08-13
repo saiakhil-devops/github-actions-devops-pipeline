@@ -1,5 +1,8 @@
 # 🚀 GitHub Actions DevOps Pipeline | Cloud & CI/CD Portfolio Project
 
+![Build](https://github.com/saiakhil-devops/github-actions-devops-pipeline/actions/workflows/ci.yml/badge.svg?branch=main)
+![CodeQL](https://github.com/saiakhil-devops/github-actions-devops-pipeline/actions/workflows/codeql.yml/badge.svg?branch=main)
+![Trivy](https://github.com/saiakhil-devops/github-actions-devops-pipeline/actions/workflows/trivy.yml/badge.svg?branch=main)
 ![GitHub repo size](https://img.shields.io/github/repo-size/saiakhil-devops/github-actions-devops-pipeline)
 ![GitHub last commit](https://img.shields.io/github/last-commit/saiakhil-devops/github-actions-devops-pipeline)
 ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/saiakhil-devops/github-actions-devops-pipeline/main.yml?label=CI%2FCD%20Pipeline)
