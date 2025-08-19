@@ -1,0 +1,19 @@
+name: Feature request
+description: Suggest an enhancement
+labels: ["type/feature"]
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What problem does this solve?
+    validations: { required: true }
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: What should change? Any alternatives?
+  - type: textarea
+    id: extra
+    attributes:
+      label: Additional context
