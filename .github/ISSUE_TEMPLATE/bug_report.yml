@@ -1,0 +1,26 @@
+name: Bug report
+description: Report a defect in this repository
+labels: ["type/bug", "triage"]
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Describe the bug and what you expected to happen.
+    validations: { required: true }
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: "1. ...\n2. ...\n3. ..."
+    validations: { required: true }
+  - type: input
+    id: version
+    attributes:
+      label: Version / commit
+      placeholder: "e.g., main@abcd123"
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / screenshots
+      render: shell
